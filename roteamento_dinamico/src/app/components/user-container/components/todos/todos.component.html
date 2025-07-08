@@ -1,0 +1,8 @@
+<h1>Todos:</h1>
+
+@for(todo of todosList$ | async; track todo;) {
+    <div style="padding: 10px;">
+        <div>Título: {{ todo.title }}</div>
+        <div>Finalizado: {{ todo.completed ? 'Sim' : 'Não' }}</div>
+    </div>
+}

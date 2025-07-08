@@ -1,0 +1,13 @@
+<h1>Post:</h1>
+
+@if(post$ | async; as post) {
+    <div style="padding: 10px;">
+        <div>Título: {{ post.title }}</div>
+        <div>Conteúdo: {{ post.body }}</div>
+        <div>Código: {{ post.id }}</div>
+    </div>
+}
+
+<button routerLink="comments">Ver comentários</button>
+
+<router-outlet></router-outlet>
